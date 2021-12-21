@@ -1,0 +1,137 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Molly's Bread Journal</title>
+  <meta name="description" content="Molly's Bread Journal">
+  <meta name="author" content="Molly Cook">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <style>
+  #mapid { height: 760px; }
+
+table {
+  border-collapse: collapse;
+  font-family: monospace;
+  text-align: center;
+}
+
+table, th, td {
+  border: 1px solid white;
+  color: #213441;
+  text-align: center;
+  
+}
+
+h1, h2, p {
+    font-family: sans-serif;
+    color: #213441;
+    text-align: center;
+    margin: 0 center;
+    font-family: monospace;
+}
+
+p {
+    color: #dfdfdf;
+}
+
+h1 {
+padding-top:25px;
+}
+
+td {
+  border-top:1pt none;
+  margin-top:0pt;
+  padding-bottom:5px;
+  padding-left:12px;
+  padding-right:12px;
+  padding-top:5px;
+  background-color: d6dadc;
+  text-align: center;
+  margin: 0 center;
+  
+}
+
+body {
+ background-color: #decbbe;
+
+}
+
+.center {
+    text-align:center; 
+    margin-left: auto; 
+    margin-right: auto; 
+  }
+
+
+</style>
+
+</head>
+
+<body>
+
+<script>
+var data = {{{pbdata}}} ; 
+
+var myTable = '<table><thead><tr><th>Entry Date</th><th>Time Spent</th><th>Bread Name</th><th>Result</th></tr></thead><tbody>';
+
+for (var i=0; i < data.length; i++) {
+	myTable += '<tr>';
+	myTable += '<td>' + data[i].date.S + '</td>';
+	myTable += '<td>' + data[i].totalTimeHours.N + ' hours, ' + data[i].totalTimeMinutes.N + ' minutes' + '</td>';
+	myTable += '<td>' + data[i].breadName.S + '</td>';
+	myTable += '<td>' + data[i].result.S + '</td>';
+	myTable += '</tr>';
+
+}
+
+
+
+myTable += '</body></table>'
+
+$(window).on('load', function() {
+  $("#myEntries").html(myTable)
+});
+
+var myTableIng = '<table><thead><tr><th>Bread Name</th><th>Salt</th><th>Water</th><th>Flour</th><th>Yeast</th></tr></thead><tbody>';
+
+for (var i=0; i < data.length; i++) {
+	myTableIng += '<tr>';
+	myTableIng += '<td>' + data[i].breadName.S + '</td>';
+	myTableIng += '<td>' + data[i].salt.N + ' ' + data[i].unitOfMeasurement.S + '</td>';
+	myTableIng += '<td>' + data[i].water.N + ' ' + data[i].unitOfMeasurement.S + '</td>';
+	myTableIng += '<td>' + data[i].flour.N + ' ' + data[i].unitOfMeasurement.S + '</td>';
+	myTableIng += '<td>' + data[i].yeast.N + ' ' + data[i].unitOfMeasurement.S + '</td>';
+	myTableIng += '</tr>';
+
+}
+
+myTableIng += '</body></table>'
+
+$(window).on('load', function() {
+  $("#Ingredients").html(myTableIng)
+});
+
+
+</script>
+
+
+<h1>Bread Journal</h1>
+
+
+
+<div id='myEntries' class='center' style="width: 1400px; padding: 20px"></div>
+
+<h1>
+<img src="bread-pic.svg" height="" width="80" alt="bread">
+<img src="bread-pic.svg" height="" width="80" alt="bread">
+<img src="bread-pic.svg" height="" width="80" alt="bread">
+</h1>
+
+<h2> Ingredients </h2>
+<div id='Ingredients' class='center' style="width: 650px; padding: 30px;"></div>
+
+
+</body>
+</html>
