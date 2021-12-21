@@ -36,7 +36,7 @@ Here is what is logged in the terminal to show the data within the database: <br
 ![image](https://user-images.githubusercontent.com/86888346/146858055-0c244550-874f-4274-a7a9-d0cf1952acc2.png)<br>
 After having all the data, I used the starter code to map the meetings on a map using leaflet.js. Here is a snapshot of that code: <br>
 ![image](https://user-images.githubusercontent.com/86888346/146866059-a8bd7602-11e0-4fb5-a057-e07b496ce462.png) <br>
-The map looked like this: <br>
+I adjusted the code to show all of the meetings rather than just the ones available today. The map looked like this: <br>
 ![image](https://user-images.githubusercontent.com/86888346/146864485-5a075027-d1d7-4113-b7e2-4e35ae0c0b0d.png)<br>
 On click, you are able to create a pop up with the data that was pulled for each meeting in that location: <br>
 ![image](https://user-images.githubusercontent.com/86888346/146864729-4da66639-ac5d-4d15-9186-9de9092f5cb5.png)
