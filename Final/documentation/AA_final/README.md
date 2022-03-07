@@ -1,7 +1,7 @@
 <h1>AA Meeting Final Review</h1>
 <h2>Molly Cook</h2>
 
-The goal of this project was to scrape all AA data from the below existing site and rework the site into a more comprehensible, user-friendly site.<br>
+The goal of this project was to scrape all AA data from the below existing site and rework the site into a more comprehensible, user-friendly web application.<br>
 ![image](https://user-images.githubusercontent.com/86888346/146854688-01ed8b7a-9497-4f47-8108-40328a0f8b17.png)
 
 I began this journey by scraping the addresses from the existing AA website link through the following code: <br>
